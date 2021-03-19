@@ -16,7 +16,23 @@ def index():
 # Implement a /predict endpoint
 
 @app.get("/predict")
-def predict(params):
+def predict(acousticness,
+    danceability,
+    duration_ms,
+    energy,
+    explicit,
+    id,
+    instrumentalness
+    key,
+    liveness,
+    loudness,
+    mode,
+    name,
+    release_date,
+    speechiness,
+    tempo,
+    valence,
+    artist):
     test={'acousticness':float(params['acousticness']),
         'danceability':float(params['danceability']),
         'duration_ms': int(params['duration_ms']),
